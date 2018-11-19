@@ -27,7 +27,6 @@ Add a `wp-content` folder to the `wordpress` volume so we can actually edit file
 …
 volumes:
   - ./wp-content:/var/www/html/wp-content:rw
-  - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:rw
 …
 ```
 
