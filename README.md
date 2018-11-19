@@ -12,7 +12,7 @@ Read these two links:
 Go through this: https://docs.docker.com/compose/wordpress/
 
 ## Mods
-We'll want to make the following changes to the `docker-compoase.yml` file we get after the tutorial:
+We'll want to make the following changes to the `docker-compose.yml` file we get after the tutorial:
 
 Set port to 8000 instead of 80:
 ```
