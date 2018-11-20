@@ -1,6 +1,6 @@
 Set up a local Wordpress Docker containers (mysql and php) using the official Docker Compose tutorial (https://docs.docker.com/compose/wordpress/).
 
-The difference between using this repository and the official tutorial is that this `docker-compose.ini` sets up your `wp-contents` folder as a shared folder and creates a symlink to the php `uploads.ini` config file. Having access to the `uploads.ini` file allows you to set the upload limit for PHP, which by default is set to only 1MB. A complete `uploads.ini` is included in this repository.
+The difference between using this repository and the official tutorial is that this `docker-compose.yml` sets up your `wp-contents` folder as a shared folder and creates a symlink to the php `uploads.ini` config file. Having access to the `uploads.ini` file allows you to set the upload limit for PHP, which by default is set to only 1MB. A complete `uploads.ini` is included in this repository.
 
 ## Simple Setup
 
