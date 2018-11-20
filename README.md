@@ -1,17 +1,17 @@
 # Set up Docker Compose and Wordpress
 
-## TLDR
+## Use This Repository
 
-Read these two links:
+1. Clone this project
+2. Run the command to start the docker containers: `docker-compose up -d`
+3. Go to localhost:8000
 
+## Or, Go Through Tutorial
+
+Based on:
 * https://docs.docker.com/compose/wordpress/
-* https://github.com/docker-library/wordpress/issues/10#issuecomment-88389890
 
-## Tutorial
-
-Go through this: https://docs.docker.com/compose/wordpress/
-
-## Mods
+### Mods
 We'll want to make the following changes to the `docker-compose.yml` file we get after the tutorial:
 
 Set port to 8000 instead of 80:
@@ -30,14 +30,14 @@ volumes:
 …
 ```
 
-## PHP File Upload Size
+### PHP File Upload Size
 To be able to import assets over 1 MB (e.g. Wordpress XML exports):
 
 (From: https://github.com/docker-library/wordpress/issues/10#issuecomment-88389890)
 
-### Create uploads.ini first
+#### Ensure you have an uploads.ini first
 
-Copy `uploads-template.ini` to `uploads.ini`, or create a new `uploads.ini` and use the following:
+Open `uploads.ini`, or create a new `uploads.ini` and make sure it looks like the following:
 ```
 file_uploads = On
 memory_limit = 64M
@@ -45,7 +45,7 @@ upload_max_filesize = 64M
 post_max_size = 64M
 max_execution_time = 600
 ```
-### Add uploads.ini to volumes:
+#### Add uploads.ini to volumes:
 
 ```
 …
@@ -66,7 +66,7 @@ wordpress:
 …
 ```
 
-### Volumes Explained
+#### Volumes Explained
 
 `- ./wp-content:/var/www/html/wp-content:rw`
 
@@ -76,20 +76,20 @@ Map wp-content folder to a folder on the computer.
 
 Map your newly created uploads.ini with the actual file on your container.
 
-## Commands to Keep In Mind
+### Commands to Keep In Mind
 
-### Compose up
+#### Compose up
 `$ docker-compose up -d`
 
-### Compose down
+#### Compose down
 `$ docker-compose down`
 
-### Log into box
+#### Log into box
 `$ docker exec -it {container name} /bin/bash`
 
 After following the tutorial, our container name should be `my_wordpress_wordpress_1`:
 
 `$ docker exec -it my_wordpress_wordpress_1 /bin/bash`
 
-### List containers (if you don't know the container name)
+#### List containers (if you don't know the container name)
 `$ docker container ls`
