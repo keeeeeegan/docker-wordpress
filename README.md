@@ -28,9 +28,9 @@ Docker Compose Commands to keep In mind, to make your life easier.
 ### Log into box
 `$ docker exec -it {container name} /bin/bash`
 
-After following the tutorial, our container name should be `my_wordpress_wordpress_1`:
+After following the tutorial, our container name should be `docker-wordpress_wordpress_1`:
 
-`$ docker exec -it my_wordpress_wordpress_1 /bin/bash`
+`$ docker exec -it docker-wordpress_wordpress_1 /bin/bash`
 
 ### List containers (if you don't know the container name)
 `$ docker container ls`
