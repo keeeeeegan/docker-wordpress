@@ -8,7 +8,12 @@ The difference between using this repository and the official tutorial is that t
 2. Clone this project `git clone git@bitbucket.org:keeeeeegan/docker-wordpress.git`.
 3. cd into directory: `cd docker-wordpress`
 4. Run the command to start the docker containers: `docker-compose up -d`.
-5. Go to http://localhost:8000.
+5. Go to http://localhost:8000 and you should see the initial setup for Wordpress.
+6. Use the credentials in `docker-compose.yml` for the `db` container to complete the Wordpress setup.
+
+## Change Port
+
+If you don't want to use port 8000, you can change it on line 20 of `docker-compose.yml` in the `wordpress` container.
 
 ## Handy Docker Compose Commands
 
