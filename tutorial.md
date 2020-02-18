@@ -76,7 +76,7 @@ Map your newly created uploads.ini with the actual file on your container.
 ### Compose down
 `$ docker-compose down`
 
-### Log into box
+### Log into container
 `$ docker exec -it {container name} /bin/bash`
 
 For example, after following the tutorial, on my compuer I ran `docker-compose ps` and got
