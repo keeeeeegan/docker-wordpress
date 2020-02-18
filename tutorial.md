@@ -79,7 +79,17 @@ Map your newly created uploads.ini with the actual file on your container.
 ### Log into box
 `$ docker exec -it {container name} /bin/bash`
 
-After following the tutorial, our container name should be `my_wordpress_wordpress_1`:
+For example, after following the tutorial, on my compuer I ran `docker-compose ps` and got
+```
+            Name                          Command               State          Ports
+--------------------------------------------------------------------------------------------
+docker-wordpress_db_1          docker-entrypoint.sh mysqld      Up      3306/tcp, 33060/tcp
+docker-wordpress_wordpress_1   docker-entrypoint.sh apach ...   Up      0.0.0.0:8000->80/tcp
+cdl215350:docker-wordpress kberry$ docker exec -it docker-wordpress_wordpress_1 /bin/bash
+```
+
+I want the container that has `_wordpress` in it, not the database, so my container
+name should be `my_wordpress_wordpress_1`:
 
 `$ docker exec -it my_wordpress_wordpress_1 /bin/bash`
 
