@@ -85,7 +85,6 @@ For example, after following the tutorial, on my compuer I ran `docker-compose p
 --------------------------------------------------------------------------------------------
 docker-wordpress_db_1          docker-entrypoint.sh mysqld      Up      3306/tcp, 33060/tcp
 docker-wordpress_wordpress_1   docker-entrypoint.sh apach ...   Up      0.0.0.0:8000->80/tcp
-cdl215350:docker-wordpress kberry$ docker exec -it docker-wordpress_wordpress_1 /bin/bash
 ```
 
 I want the container that has `_wordpress` in it, not the database, so my container
